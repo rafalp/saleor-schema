@@ -14424,7 +14424,7 @@ type Mutation {
     metadata: [MetadataInput!]
 
     """Client-side generated data required to finalize the payment."""
-    paymentData: JSONString = {a: 123, b: null, c: false, d: [1, 2, 3], e: "ok", f: LanguageCodeEnum.CA }
+    paymentData: JSONString = {a: 123, b: null, c: false, d: [1, 2, 3], e: "ok" }
 
     """
     URL of a view where users should be redirected to see the order details. URL in RFC 1808 format.
@@ -14444,6 +14444,11 @@ type Mutation {
     DEPRECATED: this field will be removed in Saleor 4.0. Use `id` instead.
     """
     token: UUID
+
+    """
+    New arg.
+    """
+    newArg: Boolean
   ): CheckoutComplete
 
   """Create a new checkout."""
