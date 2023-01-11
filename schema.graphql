@@ -14424,7 +14424,7 @@ type Mutation {
     metadata: [MetadataInput!]
 
     """Client-side generated data required to finalize the payment."""
-    paymentData: JSONString
+    paymentData: JSONString = {"a": 123, "b": null, "c": false}
 
     """
     URL of a view where users should be redirected to see the order details. URL in RFC 1808 format.
