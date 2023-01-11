@@ -14265,6 +14265,8 @@ type Mutation {
   Removes products, categories, collections from a voucher. 
   
   Requires one of the following permissions: MANAGE_DISCOUNTS.
+
+  DEPRECATED: removed in Saleor 21.37
   """
   voucherCataloguesRemove(
     """ID of a voucher."""
@@ -14444,11 +14446,6 @@ type Mutation {
     DEPRECATED: this field will be removed in Saleor 4.0. Use `id` instead.
     """
     token: UUID
-
-    """
-    New arg.
-    """
-    newArg: Boolean
   ): CheckoutComplete
 
   """Create a new checkout."""
